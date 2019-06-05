@@ -1,0 +1,233 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  /* background: url(../images/gsClassRoom.JPG); */
+  background: url(../images/gsacademy.png);
+  background-size: cover;
+}
+body:after {
+  -webkit-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: inherit;
+}
+#wrapper {
+  width: 375px;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 0px 0px 20px rgba(0,0,0,.9);
+  border-left: 1px solid rgba(0,0,0,.6);
+  border-right: 1px solid rgba(0,0,0,.6);
+}
+.clearfix:after {
+  content: "";
+  display:block;
+  clear: both;
+}
+.header {
+  line-height: 50px;
+  background: rgba(0,0,0,.8);
+  color: #fff;
+  text-align: center;
+}
+.postarea {
+  padding: 6px;
+  background: rgba(0,0,0,.8);
+  text-align: center;
+  position: relative;
+}
+
+.postarea__text {
+  /*display: inline-: ;block;;*/
+}
+
+.messageWrap__ul {
+  background: rgba(0,0,0,.5);
+  margin: 0 auto;
+  overflow: scroll;
+}
+.messageWrap__li {
+  padding: 10px;
+  color: #fff;
+}
+.message__name {
+  font-size: .7rem;
+  margin-bottom: 3px;
+}
+.myComment .message__name {
+  text-align: right;
+}
+.message__textBody {
+  padding: 5px;
+  color: #000;
+}
+.message__textBody_span {
+  background: #ccc;
+  padding: 10px 14px;
+  border-radius: .8rem;
+  margin: 1px 6px;
+  display: inline-block;
+  position: relative;
+  box-shadow: 1px 2px 6px rgba(0,0,0,.8);
+}
+.message__textBody_span:after {
+  border: 10px solid transparent;
+  border-top-color:#ccc;
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -8px;
+  top: 14px;
+  box-sizing: border-box;
+  z-index: 0;
+}
+
+.message__date {
+  font-size: .5rem;
+}
+.messageWrap__li + .messageWrap__li {
+  margin-top: 5px;
+}
+.message__img {
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  border-radius: 50%;
+/*  float: left;*/
+    display: flex;
+  box-shadow: 2px 2px 6px rgba(0,0,0,.8);
+}
+.messageWrap__div {
+  float:left;
+}
+.myComment .message__date {
+  text-align: right;
+}
+.myComment .message__textBody {
+  text-align: right;
+}
+.myComment .message__textBody_span {
+  background: #cfc;
+}
+.myComment .message__textBody_span:after {
+  left: auto;
+  right: -8px;
+  border-top-color:#cfc;
+
+}
+.myComment .message__img {
+  float: right;
+}
+.myComment .messageWrap__div {
+  float: right;
+}
+
+input[type="text"] {
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: none;
+    line-height: 2;
+    width: 0;
+}
+/*textarea {
+    width: auto;
+  flex-grow: 1;
+}*/
+
+#myName {
+    flex-grow: 1;
+}
+#text {
+    flex-grow: 3;
+}
+input[type="text"]:not(:last-child) {
+    margin-right: 4px;
+}
+
+.postarea__text_inputElem {
+  display: flex;
+}
+
+.buttonArea {
+    margin-top: 6px;
+    display: flex;
+}
+.buttonArea button {
+    flex-grow: 1;
+    border: none;
+    line-height: 2;
+    height: 3rem;
+}
+.buttonArea button:not(:first-child) {
+    margin-left: 4px;
+}
+
+.stampBtn {
+  float: left;
+  display: inline-block;
+  border-radius: 8px;
+  height: 24px;
+  width: 60px;
+  border: 2px solid #ddd;
+  background: #afa;
+}
+.postarea__button {
+  border-radius: 8px;
+  height: 24px;
+  width: 60px;
+  /*border: 2px solid #ddd;*/
+
+  background: #faa;
+
+}
+
+.stampBox {
+  background: rgba(0,0,0,.7);
+  position: absolute;
+  top: -100px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  display: none;
+  padding: 6px;
+}
+
+.stampBox.active {
+  display: block;
+}
+
+.stampBox .stampBox__img {
+  width: 70px;
+  float: left;
+}
+
+.message__stamp {
+  margin-bottom: 4px;
+}
+
+.message__stamp .message__stamp_img{
+  width: 150px;
+  animation: anime1 2s ease-in-out -2s infinite alternate;
+}
+
+@keyframes anime1 {
+  0% {transform:translateX(0);}
+  100% {transform:translateX(-20px);}
+}
+
+.buttonArea {
+    width: 100%;
+}
